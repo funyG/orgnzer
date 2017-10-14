@@ -18,7 +18,7 @@ public class Project {
 		try
 		{
 			//String uname = request.getParameter("uname");
-			PreparedStatement ps = connection.prepareStatement("SELECT id, firstname, lastname, hours, group_id, proffesion FROM agent WHERE id=" + id );
+			PreparedStatement ps = connection.prepareStatement("SELECT id, firstname, lastname, hours, group_id, proffesion FROM agent");
 			//ps.setString(1,uname);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next())
