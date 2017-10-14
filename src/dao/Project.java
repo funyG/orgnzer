@@ -12,13 +12,13 @@ import dto.FeedObjects;
 public class Project {
 	
 	
-	public ArrayList<FeedObjects> GetFeeds(Connection connection, String id) throws Exception
+	public ArrayList<FeedObjects> GetFeeds(Connection connection) throws Exception
 	{
 		ArrayList<FeedObjects> feedData = new ArrayList<FeedObjects>();
 		try
 		{
 			//String uname = request.getParameter("uname");
-			PreparedStatement ps = connection.prepareStatement("SELECT id, firstname, lastname, hours, group_id, proffesion FROM agent");
+			PreparedStatement ps = connection.prepareStatement("SELECT id, firstname, lastname, hours, group_id, proffesion FROM agent;");
 			//ps.setString(1,uname);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next())
@@ -40,6 +40,5 @@ public class Project {
 			throw e;
 		}
 	}
-
 	
 }
