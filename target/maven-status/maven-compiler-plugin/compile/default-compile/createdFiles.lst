@@ -1,0 +1,5 @@
+dao/Project.class
+dao/Database.class
+webService/FeedService.class
+model/ProjectManager.class
+dto/FeedObjects.class
