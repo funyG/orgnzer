@@ -19,4 +19,5 @@
 		<servlet-name>ServletAdaptor</servlet-name>
 		<url-pattern>/REST/*</url-pattern>
 	</servlet-mapping>
+
 </web-app>
