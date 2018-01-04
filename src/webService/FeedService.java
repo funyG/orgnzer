@@ -136,7 +136,7 @@ public class FeedService implements ContainerResponseFilter {
         } catch (Exception e) {
             System.out.println("Category<FEEDob>" + e);
         }
-        System.out.println("SubCategoryCategory===>>>" + productsCategory);
+        System.out.println("SubCategoryCategorys===>>>" + productsCategory);
         return Response.status(200).entity(productsCategory)
                 .header("Access-Control-Request-Headers", "X-Requested-With, accept, content-type")
                 .header("Access-Control-Allow-Methods", "GET, POST")

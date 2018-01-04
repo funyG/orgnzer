@@ -132,15 +132,17 @@ public class Project {
 
     public ArrayList<FeedObjects> CategoryToSubCategory(Connection connection, Integer category_id) throws Exception {
         ArrayList<FeedObjects> quer = new ArrayList<>();
-        PreparedStatement ps = connection.prepareStatement("SELECT id, name FROM organizer.sub_category WHERE id = ?");
+        PreparedStatement ps = connection.prepareStatement("SELECT id, name, category_id FROM organizer.sub_category WHERE category_id = ?");
         ps.setInt(1, category_id);
+
+        System.out.println("CategoryToSubCategory DAO LAYER = > " +  ps );
         ResultSet rs = ps.executeQuery();
         try {
             while (rs.next()) {
 
                 FeedObjects feedObject = new FeedObjects();
                 feedObject.setProduct_name(rs.getString("name"));
-                feedObject.setId(rs.getInt("id"));
+                feedObject.setCategory_id(rs.getInt("category_id"));
 
                 quer.add(feedObject);
             }
